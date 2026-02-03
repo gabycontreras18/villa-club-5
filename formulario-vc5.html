@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Propiedades</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header profesional -->
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div>
+                    <h1>Registro de Propiedades y vehículos VILLACLUB5</h1>
+                    <p class="subtitle">Gestión integral de propiedad horizontal</p>
+                </div>
+            </div>
+            
+            <!-- Barra de progreso -->
+            <div class="progress-bar">
+                <div class="progress" id="progressIndicator"></div>
+            </div>
+            
+            <div class="step-counter">
+                <span class="current-step">Paso 1 de 6</span>
+                <span>• Complete todos los campos obligatorios</span>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="content-container">
+            <form id="registroForm">
+                <!-- SECCIÓN 1: TIPO DE VIVIENDA -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">1</div>
+                        <h2 class="section-title">Tipo de Vivienda</h2>
+                    </div>
+                    
+                    <div class="radio-group">
+                        <div class="radio-card">
+                            <input type="radio" name="tipoVivienda" value="casa" id="casaRadio" required>
+                            <label for="casaRadio">
+                                <span class="radio-icon"><i class="fas fa-home"></i></span>
+                                <div>
+                                    <div class="radio-text">Casa</div>
+                                    <small>Propiedad independiente con terreno</small>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="radio-card">
+                            <input type="radio" name="tipoVivienda" value="departamento" id="departamentoRadio">
+                            <label for="departamentoRadio">
+                                <span class="radio-icon"><i class="fas fa-building"></i></span>
+                                <div>
+                                    <div class="radio-text">Departamento</div>
+                                    <small>Unidad en edificio multifamiliar</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 2: INFORMACIÓN DE LA VIVIENDA -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">2</div>
+                        <h2 class="section-title">Información de la Vivienda</h2>
+                    </div>
+                    
+                    <!-- Campos para CASA -->
+                    <div id="casaFields" class="hidden">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="manzanaCasa" class="required">Manzana</label>
+                                <div class="input-with-icon">
+                                    <select id="manzanaCasa" name="manzanaCasa" required>
+                                        <option value="">Seleccione manzana</option>
+                                        <option value="A">Manzana A</option>
+                                        <option value="B">Manzana B</option>
+                                        <option value="C">Manzana C</option>
+                                        <option value="D">Manzana D</option>
+                                        <option value="E">Manzana E</option>
+                                        <option value="F">Manzana F</option>
+                                        <option value="G">Manzana G</option>
+                                        <option value="H">Manzana H</option>
+                                        <option value="I">Manzana I</option>
+                                        <option value="J">Manzana J</option>
+                                        <option value="K">Manzana K</option>
+                                        <option value="L">Manzana L</option>
+                                        <option value="M">Manzana M</option>
+                                        <option value="N">Manzana N</option>
+                                        <option value="O">Manzana O</option>
+                                        <option value="P">Manzana P</option>
+                                        <option value="Q">Manzana Q</option>
+                                        <option value="R">Manzana R</option>
+                                        <option value="S">Manzana S</option>
+                                        <option value="T">Manzana T</option>
+                                        <option value="U">Manzana U</option>
+                                        <option value="V">Manzana V</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loteCasa" class="required">Número de Lote</label>
+                                <div class="input-with-icon">
+                                    <select id="loteCasa" name="loteCasa" required>
+                                        <option value="">Seleccione lote</option>
+                                        <option value="01">Lote 01</option>
+                                        <option value="02">Lote 02</option>
+                                        <option value="03">Lote 03</option>
+                                        <option value="04">Lote 04</option>
+                                        <option value="05">Lote 05</option>
+                                        <option value="06">Lote 06</option>
+                                        <option value="07">Lote 07</option>
+                                        <option value="08">Lote 08</option>
+                                        <option value="09">Lote 09</option>
+                                        <option value="10">Lote 10</option>
+                                        <option value="11">Lote 11</option>
+                                        <option value="12">Lote 12</option>
+                                        <option value="13">Lote 13</option>
+                                        <option value="14">Lote 14</option>
+                                        <option value="15">Lote 15</option>
+                                        <option value="16">Lote 16</option>
+                                        <option value="17">Lote 17</option>
+                                        <option value="18">Lote 18</option>
+                                        <option value="19">Lote 19</option>
+                                        <option value="20">Lote 20</option>
+                                        <option value="21">Lote 21</option>
+                                        <option value="22">Lote 22</option>
+                                        <option value="23">Lote 23</option>
+                                        <option value="24">Lote 24</option>
+                                        <option value="25">Lote 25</option>
+                                        <option value="26">Lote 26</option>
+                                        <option value="27">Lote 27</option>
+                                        <option value="28">Lote 28</option>
+                                        <option value="29">Lote 29</option>
+                                        <option value="30">Lote 30</option>
+                                        <option value="31">Lote 31</option>
+                                        <option value="32">Lote 32</option>
+                                        <option value="33">Lote 33</option>
+                                        <option value="34">Lote 34</option>
+                                        <option value="35">Lote 35</option>
+                                        <option value="36">Lote 36</option>
+                                        <option value="37">Lote 37</option>
+                                        <option value="38">Lote 38</option>
+                                        <option value="39">Lote 39</option>
+                                        <option value="40">Lote 40</option>
+                                        <option value="41">Lote 41</option>
+                                        <option value="42">Lote 42</option>
+                                        <option value="43">Lote 43</option>
+                                        <option value="44">Lote 44</option>
+                                        <option value="45">Lote 45</option>
+                                        <option value="46">Lote 46</option>
+                                        <option value="47">Lote 47</option>
+                                        <option value="48">Lote 48</option>
+                                        <option value="49">Lote 49</option>
+                                        <option value="50">Lote 50</option>
+                                        <option value="51">Lote 51</option>
+                                        <option value="52">Lote 52</option>
+                                        <option value="53">Lote 53</option>
+                                        <option value="54">Lote 54</option>
+                                        <option value="55">Lote 55</option>
+                                        <option value="56">Lote 56</option>
+                                        <option value="57">Lote 57</option>
+                                        <option value="58">Lote 58</option>
+                                        <option value="59">Lote 59</option>
+                                        <option value="60">Lote 60</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-tag"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Campos para DEPARTAMENTO -->
+                    <div id="departamentoFields" class="hidden">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="manzanaDepto" class="required">Manzana</label>
+                                <div class="input-with-icon">
+                                    <select id="manzanaDepto" name="manzanaDepto" required>
+                                        <option value="">Seleccione manzana</option>
+                                        <option value="01">Manzana 01</option>
+                                        <option value="02">Manzana 02</option>
+                                        <option value="03">Manzana 03</option>
+                                        <option value="04">Manzana 04</option>
+                                        <option value="05">Manzana 05</option>
+                                        <option value="06">Manzana 06</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-map-marker-alt"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="numeroDepto" class="required">Número de Departamento</label>
+                                <div class="input-with-icon">
+                                    <select id="numeroDepto" name="numeroDepto" required>
+                                        <option value="">Seleccione departamento</option>
+                                        <option value="101">Departamento 101</option>
+                                        <option value="102">Departamento 102</option>
+                                        <option value="103">Departamento 103</option>
+                                        <option value="104">Departamento 104</option>
+                                        <option value="201">Departamento 201</option>
+                                        <option value="202">Departamento 202</option>
+                                        <option value="203">Departamento 203</option>
+                                        <option value="204">Departamento 204</option>
+                                        <option value="301">Departamento 301</option>
+                                        <option value="302">Departamento 302</option>
+                                        <option value="303">Departamento 303</option>
+                                        <option value="304">Departamento 304</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-building"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tienda">Tienda Asignada</label>
+                                <div class="input-with-icon">
+                                    <select id="tienda" name="tienda">
+                                        <option value="">Seleccione tienda (opcional)</option>
+                                        <option value="LC-01">LC-01 - Local Comercial 01</option>
+                                        <option value="LC-02">LC-02 - Local Comercial 02</option>
+                                        <option value="LC-03">LC-03 - Local Comercial 03</option>
+                                        <option value="LC-04">LC-04 - Local Comercial 04</option>
+                                        <option value="LC-05">LC-05 - Local Comercial 05</option>
+                                        <option value="LC-06">LC-06 - Local Comercial 06</option>
+                                        <option value="LC-07">LC-07 - Local Comercial 07</option>
+                                        <option value="LC-08">LC-08 - Local Comercial 08</option>
+                                        <option value="LC-09">LC-09 - Local Comercial 09</option>
+                                        <option value="LC-10">LC-10 - Local Comercial 10</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-store"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 3: PROPIETARIO PRINCIPAL -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">3</div>
+                        <h2 class="section-title">Propietario Principal</h2>
+                    </div>
+                    
+                    <div class="alert">
+                        <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                        <div class="alert-text">
+                            <strong>Información importante:</strong> Solo puede registrar al propietario legal de la propiedad. Si usted es residente, deberá ser registrado posteriormente por el propietario a través del Sistema de Control de Accesos.
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="dniPropietario1" class="required">DNI / Documento de Identidad</label>
+                            <div class="input-with-icon">
+                                <input type="text" id="dniPropietario1" name="dniPropietario1" 
+                                       required pattern="[0-9]{8}" maxlength="8" 
+                                       placeholder="Ej: 87654321">
+                                <span class="input-icon"><i class="fas fa-id-card"></i></span>
+                            </div>
+                            <div class="validation-message">Debe contener exactamente 8 dígitos</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="apellidosPropietario1" class="required">Apellidos</label>
+                            <input type="text" id="apellidosPropietario1" name="apellidosPropietario1" 
+                                   required placeholder="Ej: Pérez Rodríguez">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nombresPropietario1" class="required">Nombres</label>
+                            <input type="text" id="nombresPropietario1" name="nombresPropietario1" 
+                                   required placeholder="Ej: Juan Carlos">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefonoPropietario1" class="required">Teléfono de Contacto</label>
+                            <div class="input-with-icon">
+                                <input type="tel" id="telefonoPropietario1" name="telefonoPropietario1" 
+                                       required pattern="[0-9]{9}" maxlength="9" 
+                                       placeholder="Ej: 987654321">
+                                <span class="input-icon"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <div class="validation-message">Debe contener 9 dígitos</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 4: SEGUNDO PROPIETARIO -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">4</div>
+                        <h2 class="section-title">Información Adicional</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">¿Existe un segundo propietario?</label>
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" name="segundoPropietario" value="si" id="segundoPropSi">
+                                <label for="segundoPropSi">
+                                    <span class="radio-icon"><i class="fas fa-check-circle"></i></span>
+                                    <div>
+                                        <div class="radio-text">Sí</div>
+                                        <small>Registrar segundo propietario</small>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="radio-card">
+                                <input type="radio" name="segundoPropietario" value="no" id="segundoPropNo" checked>
+                                <label for="segundoPropNo">
+                                    <span class="radio-icon"><i class="fas fa-times-circle"></i></span>
+                                    <div>
+                                        <div class="radio-text">No</div>
+                                        <small>Solo hay un propietario</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="segundoPropietarioFields" class="hidden">
+                        <div class="sub-section">
+                            <div class="sub-section-header">
+                                <div class="sub-section-icon"><i class="fas fa-users"></i></div>
+                                <h3 class="sub-section-title">Segundo Propietario</h3>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="dniPropietario2">DNI / Documento de Identidad</label>
+                                    <input type="text" id="dniPropietario2" name="dniPropietario2" 
+                                           pattern="[0-9]{8}" maxlength="8" 
+                                           placeholder="Ej: 87654321">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="apellidosPropietario2">Apellidos</label>
+                                    <input type="text" id="apellidosPropietario2" name="apellidosPropietario2" 
+                                           placeholder="Ej: López García">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="nombresPropietario2">Nombres</label>
+                                    <input type="text" id="nombresPropietario2" name="nombresPropietario2" 
+                                           placeholder="Ej: María Elena">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="telefonoPropietario2">Teléfono de Contacto</label>
+                                    <input type="tel" id="telefonoPropietario2" name="telefonoPropietario2" 
+                                           pattern="[0-9]{9}" maxlength="9" 
+                                           placeholder="Ej: 987654321">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 5: REGISTRO DE VEHÍCULOS -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">5</div>
+                        <h2 class="section-title">Registro de Vehículos</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">¿Desea registrar vehículos?</label>
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" name="registroVehiculos" value="si" id="vehiculosSi">
+                                <label for="vehiculosSi">
+                                    <span class="radio-icon"><i class="fas fa-car"></i></span>
+                                    <div>
+                                        <div class="radio-text">Sí</div>
+                                        <small>Registrar vehículo(s) asignados</small>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="radio-card">
+                                <input type="radio" name="registroVehiculos" value="no" id="vehiculosNo" checked>
+                                <label for="vehiculosNo">
+                                    <span class="radio-icon"><i class="fas fa-ban"></i></span>
+                                    <div>
+                                        <div class="radio-text">No</div>
+                                        <small>No hay vehículos para registrar</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="vehiculosFields" class="hidden">
+                        <!-- VEHÍCULO 1 -->
+                        <div class="sub-section">
+                            <div class="sub-section-header">
+                                <div class="sub-section-icon"><i class="fas fa-car"></i></div>
+                                <h3 class="sub-section-title">Vehículo Principal</h3>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="placaVehiculo1" class="required">Placa</label>
+                                    <input type="text" id="placaVehiculo1" name="placaVehiculo1" 
+                                           pattern="[A-Z0-9]{6}" maxlength="6" 
+                                           placeholder="ABC123" required>
+                                    <div class="validation-message">6 caracteres, solo letras mayúsculas y números</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="tipoVehiculo1" class="required">Tipo de Vehículo</label>
+                                    <select id="tipoVehiculo1" name="tipoVehiculo1" required>
+                                        <option value="">Seleccione tipo</option>
+                                        <option value="auto">Automóvil</option>
+                                        <option value="camioneta">Camioneta / SUV</option>
+                                        <option value="motocicleta">Motocicleta</option>
+                                        <option value="camion">Camión</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="marcaVehiculo1" class="required">Marca</label>
+                                    <input type="text" id="marcaVehiculo1" name="marcaVehiculo1" 
+                                           required placeholder="Ej: Toyota, Honda, Ford">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="colorVehiculo1" class="required">Color</label>
+                                    <input type="text" id="colorVehiculo1" name="colorVehiculo1" 
+                                           required placeholder="Ej: Rojo, Azul, Negro">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- VEHÍCULO 2 -->
+                        <div id="vehiculo2Section" class="hidden">
+                            <div class="sub-section">
+                                <div class="sub-section-header">
+                                    <div class="sub-section-icon"><i class="fas fa-car"></i></div>
+                                    <h3 class="sub-section-title">Segundo Vehículo</h3>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="placaVehiculo2">Placa</label>
+                                        <input type="text" id="placaVehiculo2" name="placaVehiculo2" 
+                                               pattern="[A-Z0-9]{6}" maxlength="6" 
+                                               placeholder="ABC123">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tipoVehiculo2">Tipo de Vehículo</label>
+                                        <select id="tipoVehiculo2" name="tipoVehiculo2">
+                                            <option value="">Seleccione tipo</option>
+                                            <option value="auto">Automóvil</option>
+                                            <option value="camioneta">Camioneta / SUV</option>
+                                            <option value="motocicleta">Motocicleta</option>
+                                            <option value="camion">Camión</option>
+                                            <option value="otros">Otros</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="marcaVehiculo2">Marca</label>
+                                        <input type="text" id="marcaVehiculo2" name="marcaVehiculo2" 
+                                               placeholder="Ej: Toyota, Honda, Ford">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="colorVehiculo2">Color</label>
+                                        <input type="text" id="colorVehiculo2" name="colorVehiculo2" 
+                                               placeholder="Ej: Rojo, Azul, Negro">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- VEHÍCULO 3 -->
+                        <div id="vehiculo3Section" class="hidden">
+                            <div class="sub-section">
+                                <div class="sub-section-header">
+                                    <div class="sub-section-icon"><i class="fas fa-car"></i></div>
+                                    <h3 class="sub-section-title">Tercer Vehículo</h3>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="placaVehiculo3">Placa</label>
+                                        <input type="text" id="placaVehiculo3" name="placaVehiculo3" 
+                                               pattern="[A-Z0-9]{6}" maxlength="6" 
+                                               placeholder="ABC123">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="tipoVehiculo3">Tipo de Vehículo</label>
+                                        <select id="tipoVehiculo3" name="tipoVehiculo3">
+                                            <option value="">Seleccione tipo</option>
+                                            <option value="auto">Automóvil</option>
+                                            <option value="camioneta">Camioneta / SUV</option>
+                                            <option value="motocicleta">Motocicleta</option>
+                                            <option value="camion">Camión</option>
+                                            <option value="otros">Otros</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="marcaVehiculo3">Marca</label>
+                                        <input type="text" id="marcaVehiculo3" name="marcaVehiculo3" 
+                                               placeholder="Ej: Toyota, Honda, Ford">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="colorVehiculo3">Color</label>
+                                        <input type="text" id="colorVehiculo3" name="colorVehiculo3" 
+                                               placeholder="Ej: Rojo, Azul, Negro">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Botones para agregar más vehículos -->
+                        <div class="button-group">
+                            <button type="button" id="agregarVehiculo2" class="btn btn-success">
+                                <i class="fas fa-plus btn-icon"></i>
+                                Agregar Segundo Vehículo
+                            </button>
+                            <button type="button" id="agregarVehiculo3" class="btn btn-success hidden">
+                                <i class="fas fa-plus btn-icon"></i>
+                                Agregar Tercer Vehículo
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 6: REGISTRO DE MASCOTAS -->
+                <section class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">6</div>
+                        <h2 class="section-title">Registro de Mascotas</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">¿Tiene mascotas?</label>
+                        <div class="radio-group">
+                            <div class="radio-card">
+                                <input type="radio" name="tieneMascotas" value="si" id="mascotasSi">
+                                <label for="mascotasSi">
+                                    <span class="radio-icon"><i class="fas fa-paw"></i></span>
+                                    <div>
+                                        <div class="radio-text">Sí</div>
+                                        <small>Registrar mascota(s) en la propiedad</small>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="radio-card">
+                                <input type="radio" name="tieneMascotas" value="no" id="mascotasNo" checked>
+                                <label for="mascotasNo">
+                                    <span class="radio-icon"><i class="fas fa-times"></i></span>
+                                    <div>
+                                        <div class="radio-text">No</div>
+                                        <small>No hay mascotas en la propiedad</small>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="mascotasFields" class="hidden">
+                        <div class="sub-section">
+                            <div class="sub-section-header">
+                                <div class="sub-section-icon"><i class="fas fa-paw"></i></div>
+                                <h3 class="sub-section-title">Información de Mascotas</h3>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="tipoMascotas" class="required">Tipo de Mascota(s)</label>
+                                    <input type="text" id="tipoMascotas" name="tipoMascotas" 
+                                           placeholder="Ej: Perro, Gato, Canario, etc.">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="razaMascotas">Raza(s)</label>
+                                    <input type="text" id="razaMascotas" name="razaMascotas" 
+                                           placeholder="Ej: Labrador, Siames, Canario, etc.">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cantidadMascotas" class="required">Cantidad</label>
+                                    <input type="number" id="cantidadMascotas" name="cantidadMascotas" 
+                                           min="1" max="10" 
+                                           placeholder="Número de mascotas">
+                                    <div class="validation-message">Mínimo 1, máximo 10</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactoEmergencia" class="required">Contacto de Emergencia</label>
+                                    <div class="input-with-icon">
+                                        <input type="tel" id="contactoEmergencia" name="contactoEmergencia" 
+                                               pattern="[0-9]{9}" maxlength="9" 
+                                               placeholder="Ej: 987654321">
+                                        <span class="input-icon"><i class="fas fa-phone-alt"></i></span>
+                                    </div>
+                                    <div class="validation-message">Teléfono para emergencias con las mascotas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BOTONES DE ENVÍO -->
+                <div class="form-actions">
+                    <div class="action-buttons">
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-undo btn-icon"></i>
+                            Limpiar Formulario
+                        </button>
+                        <button type="button" id="guardarBorrador" class="btn btn-secondary">
+                            <i class="fas fa-save btn-icon"></i>
+                            Guardar Borrador
+                        </button>
+                    </div>
+                    
+                    <div class="step-counter">
+                        <span class="current-step">Paso 6 de 6</span>
+                        <span>• Revise la información antes de enviar</span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        Enviar Registro
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer profesional -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Sistema Seguro de Gestión</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Términos de uso</a>
+                    <a href="#" class="footer-link">Política de privacidad</a>
+                    <a href="#" class="footer-link">Ayuda</a>
+                    <a href="#" class="footer-link">Contacto</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2026 Sistema de Control de Propiedades. Todos los derechos reservados. | Versión 2.1.0
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
